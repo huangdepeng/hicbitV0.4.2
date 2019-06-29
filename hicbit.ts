@@ -1037,7 +1037,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return adValue;
+        return Math.round(adValue);;
     }
 
     /**
@@ -1114,7 +1114,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return adValue;
+        return Math.round(adValue);
     }
 
     /**
@@ -1256,7 +1256,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return adValue;
+        return Math.round(adValue);;
     }
 	
     /**
@@ -1284,7 +1284,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return 255 - adValue;
+        return 255 - Math.round(adValue);;
     }
 
     /**
