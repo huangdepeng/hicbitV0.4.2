@@ -193,6 +193,6 @@
 	"hicbit.Dht11Result.Celsius|block":"温度（摄氏度）",
 	"hicbit.Dht11Result.Fahrenheit|block":"温度（华氏度）",
 	"hicbit.Dht11Result.humidity|block":"湿度（百分比）",
-	"hicbit.get_DHT11_value|block": "温湿度传感器DHT11 接口 %port|获取 %dhtResult"
+	"hicbit.get_DHT11_value|block": "温湿度传感器DHT11 %port|获取 %dhtResult|"
     
 }

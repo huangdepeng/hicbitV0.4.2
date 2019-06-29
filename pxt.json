@@ -1,6 +1,6 @@
 {
     "name": "HicBit",
-    "version": "0.0.1",
+    "version": "0.4.2",
     "description": "My translated HicBit extension",
     "license": "TIM",
     "dependencies": {

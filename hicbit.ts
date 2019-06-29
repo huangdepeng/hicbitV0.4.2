@@ -978,7 +978,7 @@ namespace hicbit {
     /**
     * Set the Sound sensor status,1 detect the sound source,0 no detect the sound source
     */
-    //% weight=11 blockId=hicbit_SoundSensor block="Set the Sound sensor|port %port|detect the sound source"
+    //% weight=10 blockId=hicbit_SoundSensor block="Set the Sound sensor|port %port|detect the sound source"
     export function hicbit_SoundSensor(port: hicbit_PhotosensitiveSensor): boolean {
         let status = 0;
         let flag: boolean = false;
@@ -1015,7 +1015,7 @@ namespace hicbit {
     /**
     * Get the ad value of the Sound sensor moudule
     */
-    //% weight=10 blockId=hicbit_getSoundsensorValue  block="Get Sound sensor Value|port %port|value(0~255)"
+    //% weight=11 blockId=hicbit_getSoundsensorValue  block="Get Sound sensor Value|port %port|value(0~255)"
     export function hicbit_getSoundsensorValue(port: hicbit_photosensitivePort): number {
         let ADCPin: AnalogPin;
         switch (port) {
@@ -1448,30 +1448,30 @@ namespace hicbit {
     /**
      * Get DHT11 temperature and humidity value.
      */
-    //% weight=30  blockId=get_DHT11_value block="DHT11 set port %port|get %dhtResult" blockExternalInputs=true
+    //% weight=30  blockId=get_DHT11_value block="DHT11 set port %port|get %dhtResult"
     export function get_DHT11_value(port: hicbit_PhotosensitiveSensor, dhtResult: Dht11Result): number {
         let pin_arg: DigitalPin;
         switch (port) {
             case hicbit_PhotosensitiveSensor.port1:
-                pin_arg = pins.digitalReadPin(DigitalPin.P0);
+                pin_arg = pins.digitalReadPin(DigitalPin.P1);
                 break;
             case hicbit_PhotosensitiveSensor.port2:
-                pin_arg = pins.digitalReadPin(DigitalPin.P13);
+                pin_arg = pins.digitalReadPin(DigitalPin.P2);
                 break;
             case hicbit_PhotosensitiveSensor.port3:
-                pin_arg = pins.digitalReadPin(DigitalPin.P14);
+                pin_arg = pins.digitalReadPin(DigitalPin.P3);
                 break;
             case hicbit_PhotosensitiveSensor.port4:
-                pin_arg = pins.digitalReadPin(DigitalPin.P15);
+                pin_arg = pins.digitalReadPin(DigitalPin.P4);
                 break;
             case hicbit_PhotosensitiveSensor.port5:
-                pin_arg = pins.digitalReadPin(DigitalPin.P16);
+                pin_arg = pins.digitalReadPin(DigitalPin.P10);
                 break;
             case hicbit_PhotosensitiveSensor.port7:
-                pin_arg = pins.digitalReadPin(DigitalPin.P7);
+                pin_arg = pins.digitalReadPin(DigitalPin.P6);
                 break;
             case hicbit_PhotosensitiveSensor.port8:
-                pin_arg = pins.digitalReadPin(DigitalPin.P11);
+                pin_arg = pins.digitalReadPin(DigitalPin.P9);
                 break;
         }
         switch (dhtResult) {
