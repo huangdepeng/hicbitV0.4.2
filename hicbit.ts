@@ -1037,13 +1037,13 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return Math.round(adValue);;
+        return Math.round(adValue);
     }
 
     /**
     * Get the obstacle avoidance sensor status,1 detect obstacle,0 no detect obstacle
     */
-    //% weight=13 blockId=hicbit_avoidSensor block="Obstacle avoidance sensor|port %port|detect obstacle"
+    //% weight=12 blockId=hicbit_avoidSensor block="Obstacle avoidance sensor|port %port|detect obstacle"
     export function hicbit_avoidSensor(port: hicbit_PhotosensitiveSensor): boolean {
         let status = 0;
         let flag: boolean = false;
@@ -1092,7 +1092,7 @@ namespace hicbit {
     /**
     * Get the ad value of the avoid Sensor moudule
     */
-    //% weight=12 blockId=hicbit_getavoidSensorValue  block="Get avoid Sensor Value|port %port|value(0~255)"
+    //% weight=13 blockId=hicbit_getavoidSensorValue  block="Get avoid Sensor Value|port %port|value(0~255)"
     export function hicbit_getavoidSensorValue(port: hicbit_photosensitivePort): number {
         let ADCPin: AnalogPin;
         switch (port) {
@@ -1165,10 +1165,10 @@ namespace hicbit {
                 break;
         }
         if (sensor == hicbit_LineFollowerSensor.LFSensor_1) {
-            return 255 - s1;
+            return 255 - Math.round(s1);
         }
         else {
-            return 255 - s2;
+            return 255 - Math.round(s2);
         }
 
     }
@@ -1256,7 +1256,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return Math.round(adValue);;
+        return Math.round(adValue);
     }
 	
     /**
@@ -1284,7 +1284,7 @@ namespace hicbit {
         }
         let adValue = pins.analogReadPin(ADCPin);
         adValue = adValue * 255 / 1023;
-        return 255 - Math.round(adValue);;
+        return 255 - Math.round(adValue);
     }
 
     /**
@@ -1482,5 +1482,5 @@ namespace hicbit {
         }
     }
 
-
 }
+
